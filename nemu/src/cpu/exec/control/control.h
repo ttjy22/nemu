@@ -7,5 +7,5 @@
 #include "call.h"
 #include "je.h"
 #include "jmp.h"
-//#include "jbe.h"
+#include "jbe.h"
 #endif //NEMU2020_CONTROL_H
