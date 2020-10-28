@@ -3112,6 +3112,141 @@ nemu/src/monitor/monitor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/nemu/src/monitor/monitor.c.s
 .PHONY : nemu/src/monitor/monitor.c.s
 
+testcase/pa3/hello-inline-asm.o: testcase/pa3/hello-inline-asm.c.o
+
+.PHONY : testcase/pa3/hello-inline-asm.o
+
+# target to build an object file
+testcase/pa3/hello-inline-asm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello-inline-asm.c.o
+.PHONY : testcase/pa3/hello-inline-asm.c.o
+
+testcase/pa3/hello-inline-asm.i: testcase/pa3/hello-inline-asm.c.i
+
+.PHONY : testcase/pa3/hello-inline-asm.i
+
+# target to preprocess a source file
+testcase/pa3/hello-inline-asm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello-inline-asm.c.i
+.PHONY : testcase/pa3/hello-inline-asm.c.i
+
+testcase/pa3/hello-inline-asm.s: testcase/pa3/hello-inline-asm.c.s
+
+.PHONY : testcase/pa3/hello-inline-asm.s
+
+# target to generate assembly for a file
+testcase/pa3/hello-inline-asm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello-inline-asm.c.s
+.PHONY : testcase/pa3/hello-inline-asm.c.s
+
+testcase/pa3/hello.o: testcase/pa3/hello.c.o
+
+.PHONY : testcase/pa3/hello.o
+
+# target to build an object file
+testcase/pa3/hello.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello.c.o
+.PHONY : testcase/pa3/hello.c.o
+
+testcase/pa3/hello.i: testcase/pa3/hello.c.i
+
+.PHONY : testcase/pa3/hello.i
+
+# target to preprocess a source file
+testcase/pa3/hello.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello.c.i
+.PHONY : testcase/pa3/hello.c.i
+
+testcase/pa3/hello.s: testcase/pa3/hello.c.s
+
+.PHONY : testcase/pa3/hello.s
+
+# target to generate assembly for a file
+testcase/pa3/hello.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/hello.c.s
+.PHONY : testcase/pa3/hello.c.s
+
+testcase/pa3/integral.o: testcase/pa3/integral.c.o
+
+.PHONY : testcase/pa3/integral.o
+
+# target to build an object file
+testcase/pa3/integral.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/integral.c.o
+.PHONY : testcase/pa3/integral.c.o
+
+testcase/pa3/integral.i: testcase/pa3/integral.c.i
+
+.PHONY : testcase/pa3/integral.i
+
+# target to preprocess a source file
+testcase/pa3/integral.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/integral.c.i
+.PHONY : testcase/pa3/integral.c.i
+
+testcase/pa3/integral.s: testcase/pa3/integral.c.s
+
+.PHONY : testcase/pa3/integral.s
+
+# target to generate assembly for a file
+testcase/pa3/integral.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/integral.c.s
+.PHONY : testcase/pa3/integral.c.s
+
+testcase/pa3/print-FLOAT.o: testcase/pa3/print-FLOAT.c.o
+
+.PHONY : testcase/pa3/print-FLOAT.o
+
+# target to build an object file
+testcase/pa3/print-FLOAT.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/print-FLOAT.c.o
+.PHONY : testcase/pa3/print-FLOAT.c.o
+
+testcase/pa3/print-FLOAT.i: testcase/pa3/print-FLOAT.c.i
+
+.PHONY : testcase/pa3/print-FLOAT.i
+
+# target to preprocess a source file
+testcase/pa3/print-FLOAT.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/print-FLOAT.c.i
+.PHONY : testcase/pa3/print-FLOAT.c.i
+
+testcase/pa3/print-FLOAT.s: testcase/pa3/print-FLOAT.c.s
+
+.PHONY : testcase/pa3/print-FLOAT.s
+
+# target to generate assembly for a file
+testcase/pa3/print-FLOAT.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/print-FLOAT.c.s
+.PHONY : testcase/pa3/print-FLOAT.c.s
+
+testcase/pa3/quadratic-eq.o: testcase/pa3/quadratic-eq.c.o
+
+.PHONY : testcase/pa3/quadratic-eq.o
+
+# target to build an object file
+testcase/pa3/quadratic-eq.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/quadratic-eq.c.o
+.PHONY : testcase/pa3/quadratic-eq.c.o
+
+testcase/pa3/quadratic-eq.i: testcase/pa3/quadratic-eq.c.i
+
+.PHONY : testcase/pa3/quadratic-eq.i
+
+# target to preprocess a source file
+testcase/pa3/quadratic-eq.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/quadratic-eq.c.i
+.PHONY : testcase/pa3/quadratic-eq.c.i
+
+testcase/pa3/quadratic-eq.s: testcase/pa3/quadratic-eq.c.s
+
+.PHONY : testcase/pa3/quadratic-eq.s
+
+# target to generate assembly for a file
+testcase/pa3/quadratic-eq.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/pa3/quadratic-eq.c.s
+.PHONY : testcase/pa3/quadratic-eq.c.s
+
 testcase/src/add-longlong.o: testcase/src/add-longlong.c.o
 
 .PHONY : testcase/src/add-longlong.o
@@ -3301,33 +3436,6 @@ testcase/src/gotbaha.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/gotbaha.c.s
 .PHONY : testcase/src/gotbaha.c.s
 
-testcase/src/hello-inline-asm.o: testcase/src/hello-inline-asm.c.o
-
-.PHONY : testcase/src/hello-inline-asm.o
-
-# target to build an object file
-testcase/src/hello-inline-asm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello-inline-asm.c.o
-.PHONY : testcase/src/hello-inline-asm.c.o
-
-testcase/src/hello-inline-asm.i: testcase/src/hello-inline-asm.c.i
-
-.PHONY : testcase/src/hello-inline-asm.i
-
-# target to preprocess a source file
-testcase/src/hello-inline-asm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello-inline-asm.c.i
-.PHONY : testcase/src/hello-inline-asm.c.i
-
-testcase/src/hello-inline-asm.s: testcase/src/hello-inline-asm.c.s
-
-.PHONY : testcase/src/hello-inline-asm.s
-
-# target to generate assembly for a file
-testcase/src/hello-inline-asm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello-inline-asm.c.s
-.PHONY : testcase/src/hello-inline-asm.c.s
-
 testcase/src/hello-str.o: testcase/src/hello-str.c.o
 
 .PHONY : testcase/src/hello-str.o
@@ -3355,33 +3463,6 @@ testcase/src/hello-str.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello-str.c.s
 .PHONY : testcase/src/hello-str.c.s
 
-testcase/src/hello.o: testcase/src/hello.c.o
-
-.PHONY : testcase/src/hello.o
-
-# target to build an object file
-testcase/src/hello.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello.c.o
-.PHONY : testcase/src/hello.c.o
-
-testcase/src/hello.i: testcase/src/hello.c.i
-
-.PHONY : testcase/src/hello.i
-
-# target to preprocess a source file
-testcase/src/hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello.c.i
-.PHONY : testcase/src/hello.c.i
-
-testcase/src/hello.s: testcase/src/hello.c.s
-
-.PHONY : testcase/src/hello.s
-
-# target to generate assembly for a file
-testcase/src/hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/hello.c.s
-.PHONY : testcase/src/hello.c.s
-
 testcase/src/if-else.o: testcase/src/if-else.c.o
 
 .PHONY : testcase/src/if-else.o
@@ -3408,33 +3489,6 @@ testcase/src/if-else.s: testcase/src/if-else.c.s
 testcase/src/if-else.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/if-else.c.s
 .PHONY : testcase/src/if-else.c.s
-
-testcase/src/integral.o: testcase/src/integral.c.o
-
-.PHONY : testcase/src/integral.o
-
-# target to build an object file
-testcase/src/integral.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/integral.c.o
-.PHONY : testcase/src/integral.c.o
-
-testcase/src/integral.i: testcase/src/integral.c.i
-
-.PHONY : testcase/src/integral.i
-
-# target to preprocess a source file
-testcase/src/integral.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/integral.c.i
-.PHONY : testcase/src/integral.c.i
-
-testcase/src/integral.s: testcase/src/integral.c.s
-
-.PHONY : testcase/src/integral.s
-
-# target to generate assembly for a file
-testcase/src/integral.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/integral.c.s
-.PHONY : testcase/src/integral.c.s
 
 testcase/src/leap-year.o: testcase/src/leap-year.c.o
 
@@ -3705,60 +3759,6 @@ testcase/src/prime.s: testcase/src/prime.c.s
 testcase/src/prime.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/prime.c.s
 .PHONY : testcase/src/prime.c.s
-
-testcase/src/print-FLOAT.o: testcase/src/print-FLOAT.c.o
-
-.PHONY : testcase/src/print-FLOAT.o
-
-# target to build an object file
-testcase/src/print-FLOAT.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/print-FLOAT.c.o
-.PHONY : testcase/src/print-FLOAT.c.o
-
-testcase/src/print-FLOAT.i: testcase/src/print-FLOAT.c.i
-
-.PHONY : testcase/src/print-FLOAT.i
-
-# target to preprocess a source file
-testcase/src/print-FLOAT.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/print-FLOAT.c.i
-.PHONY : testcase/src/print-FLOAT.c.i
-
-testcase/src/print-FLOAT.s: testcase/src/print-FLOAT.c.s
-
-.PHONY : testcase/src/print-FLOAT.s
-
-# target to generate assembly for a file
-testcase/src/print-FLOAT.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/print-FLOAT.c.s
-.PHONY : testcase/src/print-FLOAT.c.s
-
-testcase/src/quadratic-eq.o: testcase/src/quadratic-eq.c.o
-
-.PHONY : testcase/src/quadratic-eq.o
-
-# target to build an object file
-testcase/src/quadratic-eq.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/quadratic-eq.c.o
-.PHONY : testcase/src/quadratic-eq.c.o
-
-testcase/src/quadratic-eq.i: testcase/src/quadratic-eq.c.i
-
-.PHONY : testcase/src/quadratic-eq.i
-
-# target to preprocess a source file
-testcase/src/quadratic-eq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/quadratic-eq.c.i
-.PHONY : testcase/src/quadratic-eq.c.i
-
-testcase/src/quadratic-eq.s: testcase/src/quadratic-eq.c.s
-
-.PHONY : testcase/src/quadratic-eq.s
-
-# target to generate assembly for a file
-testcase/src/quadratic-eq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NEMU2020.dir/build.make CMakeFiles/NEMU2020.dir/testcase/src/quadratic-eq.c.s
-.PHONY : testcase/src/quadratic-eq.c.s
 
 testcase/src/quick-sort.o: testcase/src/quick-sort.c.o
 
@@ -4369,6 +4369,21 @@ help:
 	@echo "... nemu/src/monitor/monitor.o"
 	@echo "... nemu/src/monitor/monitor.i"
 	@echo "... nemu/src/monitor/monitor.s"
+	@echo "... testcase/pa3/hello-inline-asm.o"
+	@echo "... testcase/pa3/hello-inline-asm.i"
+	@echo "... testcase/pa3/hello-inline-asm.s"
+	@echo "... testcase/pa3/hello.o"
+	@echo "... testcase/pa3/hello.i"
+	@echo "... testcase/pa3/hello.s"
+	@echo "... testcase/pa3/integral.o"
+	@echo "... testcase/pa3/integral.i"
+	@echo "... testcase/pa3/integral.s"
+	@echo "... testcase/pa3/print-FLOAT.o"
+	@echo "... testcase/pa3/print-FLOAT.i"
+	@echo "... testcase/pa3/print-FLOAT.s"
+	@echo "... testcase/pa3/quadratic-eq.o"
+	@echo "... testcase/pa3/quadratic-eq.i"
+	@echo "... testcase/pa3/quadratic-eq.s"
 	@echo "... testcase/src/add-longlong.o"
 	@echo "... testcase/src/add-longlong.i"
 	@echo "... testcase/src/add-longlong.s"
@@ -4390,21 +4405,12 @@ help:
 	@echo "... testcase/src/gotbaha.o"
 	@echo "... testcase/src/gotbaha.i"
 	@echo "... testcase/src/gotbaha.s"
-	@echo "... testcase/src/hello-inline-asm.o"
-	@echo "... testcase/src/hello-inline-asm.i"
-	@echo "... testcase/src/hello-inline-asm.s"
 	@echo "... testcase/src/hello-str.o"
 	@echo "... testcase/src/hello-str.i"
 	@echo "... testcase/src/hello-str.s"
-	@echo "... testcase/src/hello.o"
-	@echo "... testcase/src/hello.i"
-	@echo "... testcase/src/hello.s"
 	@echo "... testcase/src/if-else.o"
 	@echo "... testcase/src/if-else.i"
 	@echo "... testcase/src/if-else.s"
-	@echo "... testcase/src/integral.o"
-	@echo "... testcase/src/integral.i"
-	@echo "... testcase/src/integral.s"
 	@echo "... testcase/src/leap-year.o"
 	@echo "... testcase/src/leap-year.i"
 	@echo "... testcase/src/leap-year.s"
@@ -4435,12 +4441,6 @@ help:
 	@echo "... testcase/src/prime.o"
 	@echo "... testcase/src/prime.i"
 	@echo "... testcase/src/prime.s"
-	@echo "... testcase/src/print-FLOAT.o"
-	@echo "... testcase/src/print-FLOAT.i"
-	@echo "... testcase/src/print-FLOAT.s"
-	@echo "... testcase/src/quadratic-eq.o"
-	@echo "... testcase/src/quadratic-eq.i"
-	@echo "... testcase/src/quadratic-eq.s"
 	@echo "... testcase/src/quick-sort.o"
 	@echo "... testcase/src/quick-sort.i"
 	@echo "... testcase/src/quick-sort.s"
