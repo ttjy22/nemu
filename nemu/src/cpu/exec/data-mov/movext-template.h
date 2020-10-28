@@ -1,5 +1,5 @@
 #include "cpu/exec/template-start.h"
-
+#define instr movext
 #if DATA_BYTE == 2 || DATA_BYTE  == 4
 make_helper(concat(movzb_, SUFFIX)) {
 	int len = decode_rm2r_b(eip + 1);

@@ -1,5 +1,6 @@
 #include "cpu/exec/template-start.h"
 
+#define instr cltd
 #if DATA_BYTE == 2 || DATA_BYTE == 4
 make_helper(concat(cltd_, SUFFIX)) {
 	REG(R_EDX) = -(MSB(REG(R_EAX)));
