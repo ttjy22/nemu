@@ -12,6 +12,6 @@
 #include "shl.h"
 #include "shr.h"
 #include "shrd.h"
-//#include "test.h"
+#include "test.h"
 //#include "setne.h"
 #endif //NEMU2020_LOGIC_H
