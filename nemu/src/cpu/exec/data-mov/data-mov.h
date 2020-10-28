@@ -7,7 +7,7 @@
 #include "mov.h"
 #include "xchg.h"
 #include "push.h"
-//#include "pop.h"
+#include "pop.h"
 #include "ret.h"
 #include "leave.h"
 #include "mov.h"
