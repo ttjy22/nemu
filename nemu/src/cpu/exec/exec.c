@@ -28,7 +28,7 @@ make_group(group1_v, add_i2rm_v,
 	inv, inv, inv)
 
 /* 0x83 */
-make_group(group1_sx_v, inv, inv, inv,
+make_group(group1_sx_v, add_si2rm_v, inv, inv,
 	inv, inv,sub_si2rm_v, inv,
            cmp_si2rm_v)
 
