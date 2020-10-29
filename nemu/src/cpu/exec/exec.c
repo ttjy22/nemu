@@ -108,7 +108,7 @@ helper_fun opcode_table [256] = {
 /* 0x2c */	inv, inv, inv, inv,
 /* 0x30 */	inv, inv, inv, inv,
 /* 0x34 */	inv, inv, inv, inv,
-/* 0x38 */	inv, cmp_r2rm_v, inv, inv,
+/* 0x38 */	inv, cmp_r2rm_v, inv, inv,// TODO fib卡
 /* 0x3c */	inv, inv, inv, inv,
 /* 0x40 */	inv, inv, inv, inv,
 /* 0x44 */	inv, inv, inv, inv,
@@ -125,7 +125,7 @@ helper_fun opcode_table [256] = {
 /* 0x70 */	inv, inv, inv, inv,
 /* 0x74 */	je_i_b, inv, jbe_i_b, inv,
 /* 0x78 */	inv, inv, inv, inv,
-/* 0x7c */	inv, inv, jle_i_b, inv,// TODO 不懂
+/* 0x7c */	inv, inv, jle_i_b, inv,// TODO 不懂为啥_v错了
 /* 0x80 */	group1_b, group1_v, inv, group1_sx_v,
 /* 0x84 */	inv, test_r2rm_v, inv, inv,
 /* 0x88 */	mov_r2rm_b, mov_r2rm_v, mov_rm2r_b, mov_rm2r_v,
