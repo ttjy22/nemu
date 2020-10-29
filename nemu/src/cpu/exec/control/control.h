@@ -8,4 +8,5 @@
 #include "je.h"
 #include "jmp.h"
 #include "jbe.h"
+#include "jle.h"
 #endif //NEMU2020_CONTROL_H
