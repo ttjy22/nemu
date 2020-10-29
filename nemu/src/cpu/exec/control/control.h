@@ -10,4 +10,5 @@
 #include "jbe.h"
 #include "jle.h"
 #include "ja.h"
+#include "jne.h"
 #endif //NEMU2020_CONTROL_H
