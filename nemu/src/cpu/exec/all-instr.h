@@ -5,7 +5,7 @@
 
 #include "logic/logic.h"
 
-#include "string/rep.h"
+#include "string/string.h"
 
 #include "misc/misc.h"
 
