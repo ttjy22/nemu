@@ -39,8 +39,8 @@ make_group(group2_i_b,
 
 /* 0xc1 */
 make_group(group2_i_v,
-	inv, inv, inv, inv, 
-	inv, inv, inv, sar_rm_imm_v) // 为啥选这个呀
+	inv, inv, inv, inv,
+	shl_rm_imm_v, shr_rm_imm_v, inv, sar_rm_imm_v) // 为啥选这个呀
 
 /* 0xd0 */
 make_group(group2_1_b,
