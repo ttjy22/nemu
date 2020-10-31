@@ -2,4 +2,18 @@
 // Created by 浮生未休 on 2020/10/30.
 //
 
-#include "movs.h"
+#include "cpu/exec/helper.h"
+
+#define DATA_BYTE 1
+#include "movs-template.h"
+#undef DATA_BYTE
+
+#define DATA_BYTE 2
+#include "movs-template.h"
+#undef DATA_BYTE
+
+#define DATA_BYTE 4
+#include "movs-template.h"
+#undef DATA_BYTE
+
+make_helper_v(movs_n)

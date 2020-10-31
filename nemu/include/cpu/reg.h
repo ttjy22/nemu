@@ -63,6 +63,7 @@ typedef struct {
                 uint32_t SF:	1;
                 uint32_t PF:	1;
                 uint32_t ZF:	1;
+                uint32_t DF:	1;
             };
             uint32_t eflags;
         };
