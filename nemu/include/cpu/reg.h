@@ -57,17 +57,17 @@ typedef struct {
 
         struct {
             uint32_t eax, ecx, edx, ebx, esp, ebp, esi, edi;
-            struct{
-                uint32_t CF:	1;
-                uint32_t OF:	1;
-                uint32_t SF:	1;
-                uint32_t PF:	1;
-                uint32_t ZF:	1;
-                uint32_t DF:	1;
-            };
-            uint32_t eflags;
         };
     };
+    struct{
+        uint32_t CF:	1;
+        uint32_t OF:	1;
+        uint32_t SF:	1;
+        uint32_t PF:	1;
+        uint32_t ZF:	1;
+        uint32_t DF:	1;
+    };
+    uint32_t eflags;
     swaddr_t eip;
     bool INTR;
     struct GDTR{
