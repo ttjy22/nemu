@@ -9,7 +9,7 @@ static void do_execute () {
 	/* TODO: Update EFLAGS. */
 //	panic("please implement me");
     int len = (DATA_BYTE << 3) - 1;
-    cpu.CF = (result < op_dest->val); 
+    cpu.CF = (result < op_dest->val);
     cpu.SF=result >> len;
     int s1,s2;
     s1=op_dest->val>>len;
