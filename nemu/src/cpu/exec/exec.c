@@ -108,7 +108,7 @@ helper_fun opcode_table [256] = {
 /* 0x2c */	inv, inv, inv, inv,
 /* 0x30 */	inv, xor_r2rm_v, inv, inv,
 /* 0x34 */	inv, inv, inv, inv,
-/* 0x38 */	cmp_r2rm_b, cmp_r2rm_v, inv, cmp_rm2r_v,// TODO cmp_r2rm_v:fib打点 && switch、to-lower-case hit bad trap
+/* 0x38 */	cmp_r2rm_b, cmp_r2rm_v, cmp_r2rm_b, cmp_rm2r_v,// TODO cmp_r2rm_v:fib打点 && switch、to-lower-case hit bad trap
 /* 0x3c */	inv, inv, inv, inv,
 /* 0x40 */	inv, inc_r_v, inv, inv,
 /* 0x44 */	inv, inv, inv, inv,
@@ -175,7 +175,7 @@ helper_fun _2byte_opcode_table [256] = {
 /* 0x2c */	inv, inv, inv, inv, 
 /* 0x30 */	inv, inv, inv, inv, 
 /* 0x34 */	inv, inv, inv, inv,
-/* 0x38 */	inv, inv, inv, inv, 
+/* 0x38 */	inv, inv, inv, inv,
 /* 0x3c */	inv, inv, inv, inv, 
 /* 0x40 */	inv, inv, inv, inv, 
 /* 0x44 */	inv, inv, inv, inv,
