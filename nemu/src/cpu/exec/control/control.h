@@ -13,4 +13,7 @@
 #include "jne.h"
 #include "jge.h"
 #include "jl.h"
+#include "jp.h"
+#include "jg.h"
+
 #endif //NEMU2020_CONTROL_H
