@@ -14,4 +14,5 @@
 #include "add.h"
 #include "cmp.h"
 #include "sub.h"
+#include "adc.h"
 #endif //NEMU2020_ARITH_H
