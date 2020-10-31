@@ -196,7 +196,7 @@ helper_fun _2byte_opcode_table [256] = {
 /* 0x80 */	inv, inv, inv, inv,
 /* 0x84 */	inv, inv, jbe_i_v, inv,
 /* 0x88 */	inv, inv, inv, inv, 
-/* 0x8c */	jl_i_v, inv, inv, inv, //TODO 为啥是2字节的指令
+/* 0x8c */	jl_i_v, inv, jle_i_v, inv, //TODO 为啥是2字节的指令
 /* 0x90 */	inv, inv, inv, inv,
 /* 0x94 */	sete_rm_b, setne_rm_b, inv, inv,
 /* 0x98 */	inv, inv, inv, inv, 
