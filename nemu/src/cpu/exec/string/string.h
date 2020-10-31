@@ -3,4 +3,5 @@
 //
 
 #include "rep.h"
+#include "stos.h"
 #include "movs.h"
