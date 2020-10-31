@@ -7,7 +7,7 @@
 static void do_execute() {
     DATA_TYPE result = op_dest->val + op_src->val;
     int len = (DATA_BYTE << 3) - 1;
-    cpu.CF = op_dest->val < op_src->val;// TODO 咋搞哦不知道
+    cpu.CF = (result < op_dest->val);// TODO 咋搞哦不知道
     cpu.SF=result >> len;
     int s1,s2;
     s1=op_dest->val>>len;
