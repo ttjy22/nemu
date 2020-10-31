@@ -15,5 +15,6 @@
 #include "jl.h"
 #include "jp.h"
 #include "jg.h"
+#include "js.h"
 
 #endif //NEMU2020_CONTROL_H
