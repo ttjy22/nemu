@@ -83,6 +83,7 @@ void restart() {
 
 	/* Read the entry code into memory. */
 	load_entry();
+	cpu.eflags=2;
 
 	/* Set the initial instruction pointer. */
 	cpu.eip = ENTRY_START;
