@@ -28,7 +28,7 @@ make_helper(concat(ret_i_, SUFFIX))
         MEM_W (REG (R_ESP) + i,0);
     REG (R_ESP) += val;
     print_asm("ret $0x%x",val);
-    return 1;
+    return 3;
 }
 
 #include "cpu/exec/template-end.h"
