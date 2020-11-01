@@ -16,5 +16,4 @@
 #include "sub.h"
 #include "sbb.h"
 #include "adc.h"
-#include "scas.h"
 #endif //NEMU2020_ARITH_H

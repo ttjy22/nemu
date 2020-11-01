@@ -5,3 +5,5 @@
 #include "rep.h"
 #include "stos.h"
 #include "movs.h"
+#include "scas.h"
+#include "lods.h"
