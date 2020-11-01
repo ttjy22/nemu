@@ -1,20 +1,13 @@
-////
-//// Created by 浮生未休 on 2020/10/31.
-////
 //
-//#ifndef __SBB_H__
-//#define __SBB_H__
+// Created by 浮生未休 on 2020/10/31.
 //
-//make_helper(sbb_i2a_b);
-//make_helper(sbb_i2rm_b);
-//make_helper(sbb_r2rm_b);
-//make_helper(sbb_rm2r_b);
-//make_helper(sbb_si2rm_b);
-//
-//make_helper(sbb_i2a_v);
-//make_helper(sbb_i2rm_v);
-//make_helper(sbb_r2rm_v);
-//make_helper(sbb_rm2r_v);
-//make_helper(sbb_si2rm_v);
-//
-//#endif
+
+#ifndef __SCAS_H__
+#define __SCAS_H__
+
+make_helper(scas_n_b);
+make_helper(scas_n_w);
+make_helper(scas_n_l);
+make_helper(scas_n_v);
+
+#endif
