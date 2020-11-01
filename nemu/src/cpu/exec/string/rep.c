@@ -15,20 +15,24 @@ make_helper(rep) {
 			exec(eip + 1);
 			count ++;
 			cpu.ecx --;
-			assert(ops_decoded.opcode == 0xa4	// movsb
-				|| ops_decoded.opcode == 0xa5	// movsw
-				|| ops_decoded.opcode == 0xaa	// stosb
-				|| ops_decoded.opcode == 0xab	// stosw
-				|| ops_decoded.opcode == 0xa6	// cmpsb
-				|| ops_decoded.opcode == 0xa7	// cmpsw
-				|| ops_decoded.opcode == 0xae	// scasb
-				|| ops_decoded.opcode == 0xaf	// scasw
-				);
+//			assert(ops_decoded.opcode == 0xa4	// movsb
+//				|| ops_decoded.opcode == 0xa5	// movsw
+//				|| ops_decoded.opcode == 0xaa	// stosb
+//				|| ops_decoded.opcode == 0xab	// stosw
+//				|| ops_decoded.opcode == 0xa6	// cmpsb
+//				|| ops_decoded.opcode == 0xa7	// cmpsw
+//				|| ops_decoded.opcode == 0xae	// scasb
+//				|| ops_decoded.opcode == 0xaf	// scasw
+//				);
 
 			/* TODO: Jump out of the while loop if necessary. */
-
+            if (ops_decoded.opcode == 0xaf|| ops_decoded.opcode == 0xae)
+            {
+                if (!cpu.ZF)break;
+            }
 		}
 		len = 1;
+		if(swaddr_read(cpu.eip+1,1)==0x66)len=2;
 	}
 
 #ifdef DEBUG
@@ -46,14 +50,17 @@ make_helper(repnz) {
 		exec(eip + 1);
 		count ++;
 		cpu.ecx --;
-		assert(ops_decoded.opcode == 0xa6	// cmpsb
-				|| ops_decoded.opcode == 0xa7	// cmpsw
-				|| ops_decoded.opcode == 0xae	// scasb
-				|| ops_decoded.opcode == 0xaf	// scasw
-			  );
+//		assert(ops_decoded.opcode == 0xa6	// cmpsb
+//				|| ops_decoded.opcode == 0xa7	// cmpsw
+//				|| ops_decoded.opcode == 0xae	// scasb
+//				|| ops_decoded.opcode == 0xaf	// scasw
+//			  );
 
 		/* TODO: Jump out of the while loop if necessary. */
-
+        if (ops_decoded.opcode == 0xaf|| ops_decoded.opcode == 0xae)
+        {
+            if (cpu.ZF)break;
+        }
 	}
 
 #ifdef DEBUG
@@ -61,6 +68,7 @@ make_helper(repnz) {
 	sprintf(temp, "repnz %s", assembly);
 	sprintf(assembly, "%s[cnt = %d]", temp, count);
 #endif
-
-	return 1 + 1;
+	int len=1;
+    if(swaddr_read(cpu.eip+1,1)==0x66)len=2;
+	return len + 1;
 }
