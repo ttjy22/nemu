@@ -4,8 +4,8 @@ typedef unsigned char uint8_t;
 typedef char bool;
 
 bool getbit(void *buf, int offset){
-	int byte = offset >> 3;
     set_bp();
+    int byte = offset >> 3;
 	offset &= 7;
 	uint8_t mask = 1 << offset;
 	return (((uint8_t *)buf)[byte] & mask) != 0;
