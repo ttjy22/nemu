@@ -16,4 +16,5 @@
 #include "setb.h"
 #include "setne.h"
 #include "sete.h"
+#include "setge.h"
 #endif //NEMU2020_LOGIC_H
