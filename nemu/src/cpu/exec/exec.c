@@ -19,7 +19,7 @@ static make_helper(_2byte_esc);
 	
 /* 0x80 */
 make_group(group1_b,
-	inv, inv, inv, inv,
+	inv, or_i2rm_b, inv, inv,
 	and_i2rm_b, inv, inv, cmp_i2rm_b)
 
 /* 0x81 */
