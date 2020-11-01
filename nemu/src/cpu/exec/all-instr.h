@@ -12,3 +12,5 @@
 #include "special/special.h"
 
 #include "control/control.h"
+
+#include "intr/intr.h"
