@@ -62,7 +62,6 @@ FLOAT f2F(float a) {
 	 * performing arithmetic operations on it directly?
 	 */
 
-//	nemu_assert(0);
 //    int data = *(int *)&a;
 //    int s;
 //    char offest = ((data >> 23) & 0xff) - 127;
@@ -86,6 +85,7 @@ FLOAT f2F(float a) {
 //    }
 //    return s * data;
     int b = *(uint32_t *)&a;
+    set_bp();
     int sign = b >> 31;
     int exp = (b >> 23) & 0xff;
     FLOAT k = b & 0x7fffff;
