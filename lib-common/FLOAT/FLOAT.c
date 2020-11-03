@@ -1,8 +1,8 @@
 #include "FLOAT.h"
 
 FLOAT F_mul_F(FLOAT a, FLOAT b) {
-//	nemu_assert(0);
-	return a*b*(1<<16);
+    long long c = (long long)a * (long long)b;
+    return (FLOAT)(c >> 16);
 }
 
 FLOAT F_div_F(FLOAT a, FLOAT b) {
@@ -24,8 +24,31 @@ FLOAT F_div_F(FLOAT a, FLOAT b) {
 	 * out another way to perform the division.
 	 */
 
-//	nemu_assert(0);
-	return a/b/(1<<16);
+    int sign = 1;
+    if (a < 0)
+    {
+        sign = -sign;
+        a = -a;
+    }
+    if (b < 0)
+    {
+        sign = -sign;
+        b = -b;
+    }
+    int result = a / b;
+    a = a % b;
+    int i;
+    for (i = 0; i < 16; i++)
+    {
+        a <<= 1;
+        result <<= 1;
+        if (a >= b)
+        {
+            result++;
+            a -= b;
+        }
+    }
+    return result * sign;
 }
 
 FLOAT f2F(float a) {
@@ -40,12 +63,41 @@ FLOAT f2F(float a) {
 	 */
 
 //	nemu_assert(0);
-    return (FLOAT) a * (1 << 16);
+    int data = *(int *)&a;
+    int s;
+    char offest = ((data >> 23) & 0xff) - 127;
+    s = data >> 31;
+    if (s == 0)
+        s = 1;
+    data &= 0x7fffff;
+    if (offest != -127)
+        data |= 0x800000;
+    if (offest < 7)
+    {
+        data >>= 7 - offest;
+    }
+    else if (offest > 7 && offest < 15)
+    {
+        data <<= offest - 7;
+    }
+    else if (offest >= 15) //溢出
+    {
+        nemu_assert(0);
+    }
+    return s * data;
 }
 
 FLOAT Fabs(FLOAT a) {
-	nemu_assert(0);
-	return 0;
+    FLOAT b;
+    if (a < 0)
+    {
+        b = -a;
+    }
+    else
+    {
+        b = a;
+    }
+    return b;
 }
 
 /* Functions below are already implemented */
