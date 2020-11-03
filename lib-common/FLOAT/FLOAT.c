@@ -84,8 +84,8 @@ FLOAT f2F(float a) {
 //        nemu_assert(0);
 //    }
 //    return s * data;
-    set_bp();
-    int b = *(uint32_t *)&a;
+    void *tp=&a;
+    int b = *(uint32_t *)tp;
     int sign = b >> 31;
     int exp = (b >> 23) & 0xff;
     FLOAT k = b & 0x7fffff;
