@@ -10,7 +10,7 @@ $(FLOAT): $(FLOAT_A_OBJ)
 
 # TODO: complete the following rules
 
-FLOAT_CFLAGS = -c -m32 -O2 -fno-builtin -fno-stack-protector -fno-builtin -D_FORTIFY_SOURCE=0 -I lib-common
+FLOAT_CFLAGS = -c -m32 -O2 -fno-builtin -fno-stack-protector -fno-builtin -D_FORTIFY_SOURCE=0 -I /home/simpleedu/nemu/lib-common
 
 $(FLOAT_O): $(LIB_COMMON_DIR)/FLOAT/FLOAT.c
 	@mkdir -p obj/$(LIB_COMMON_DIR)
