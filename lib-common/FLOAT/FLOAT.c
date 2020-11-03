@@ -40,7 +40,7 @@ FLOAT f2F(float a) {
 	 */
 
 //	nemu_assert(0);
-    return a * (1 << 16);
+    return (FLOAT) a * (1 << 16);
 }
 
 FLOAT Fabs(FLOAT a) {
