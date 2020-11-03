@@ -55,7 +55,7 @@ clean: clean-cpp
 ##### some convinient rules #####
 
 # USERPROG := lib-common/FLOAT/FLOAT
-USERPROG := obj/testcase/integral
+USERPROG := obj/testcase/bit
 ENTRY := $(USERPROG)
 
 entry: $(ENTRY)
