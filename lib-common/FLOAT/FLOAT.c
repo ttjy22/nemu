@@ -85,6 +85,7 @@ FLOAT f2F(float a) {
 //    }
 //    return s * data;
     void *tp=&a;
+    set_bp();
     int b = *(uint32_t *)tp;
     int sign = b >> 31;
     int exp = (b >> 23) & 0xff;
