@@ -1,8 +1,8 @@
 #include "FLOAT.h"
 
 FLOAT F_mul_F(FLOAT a, FLOAT b) {
-	nemu_assert(0);
-	return 0;
+//	nemu_assert(0);
+	return a*b*(1<<16);
 }
 
 FLOAT F_div_F(FLOAT a, FLOAT b) {
@@ -24,8 +24,8 @@ FLOAT F_div_F(FLOAT a, FLOAT b) {
 	 * out another way to perform the division.
 	 */
 
-	nemu_assert(0);
-	return 0;
+//	nemu_assert(0);
+	return a/b/(1<<16);
 }
 
 FLOAT f2F(float a) {
@@ -39,8 +39,8 @@ FLOAT f2F(float a) {
 	 * performing arithmetic operations on it directly?
 	 */
 
-	nemu_assert(0);
-	return 0;
+//	nemu_assert(0);
+    return a * (1 << 16);
 }
 
 FLOAT Fabs(FLOAT a) {
