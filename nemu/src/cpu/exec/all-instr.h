@@ -14,3 +14,5 @@
 #include "control/control.h"
 
 #include "intr/intr.h"
+
+#include "cmov/cmov.h"
