@@ -50,7 +50,6 @@ int set_watchpoint(char *e) {
 
 	return p->NO;
 }
-
 bool delete_watchpoint(int NO) {
 	WP *p, *prev = NULL;
 	for(p = head; p != NULL; prev = p, p = p->next) {
