@@ -61,29 +61,6 @@ FLOAT f2F(float a) {
 	 * stack. How do you retrieve it to another variable without
 	 * performing arithmetic operations on it directly?
 	 */
-
-//    int data = *(int *)&a;
-//    int s;
-//    char offest = ((data >> 23) & 0xff) - 127;
-//    s = data >> 31;
-//    if (s == 0)
-//        s = 1;
-//    data &= 0x7fffff;
-//    if (offest != -127)
-//        data |= 0x800000;
-//    if (offest < 7)
-//    {
-//        data >>= 7 - offest;
-//    }
-//    else if (offest > 7 && offest < 15)
-//    {
-//        data <<= offest - 7;
-//    }
-//    else if (offest >= 15) //溢出
-//    {
-//        nemu_assert(0);
-//    }
-//    return s * data;
     void *tp=&a;
     int b = *(uint32_t *)tp;
     int sign = b >> 31;
