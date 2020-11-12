@@ -81,3 +81,32 @@ void load_elf_tables(int argc, char *argv[]) {
 	fclose(fp);
 }
 
+uint32_t find_obj(char *sym)
+{
+  int i;
+  int ret = 0;
+  for (i = 0; i < nr_symtab_entry; i++)
+  {
+    if (((symtab[i].st_info & 0xf) == STT_OBJECT) && (strcmp(sym, strtab + symtab[i].st_name) == 0))
+    {
+      ret = symtab[i].st_value;
+      break;
+    }
+  }
+  assert(ret);
+  return ret;
+}
+
+void find_func_name(char *sym, uint32_t ip)
+{
+  int i;
+  for (i = 0; i < nr_symtab_entry; i++)
+  {
+    if (((symtab[i].st_info & 0xf) == STT_FUNC) && (ip >= symtab[i].st_value) && (ip<symtab[i].st_value+symtab[i].st_size))
+    {
+      strcpy(sym,strtab+symtab[i].st_name);
+      break;
+    }
+  }
+  return;
+}

@@ -11,7 +11,7 @@ enum {
 	NOTYPE = 256, EQ
 
 	/* TODO: Add more token types */
-        , NUM, NEQ, OR, AND, REG, REF, NEG
+        , NUM, NEQ, OR, AND, REG, REF, NEG, VAR
 };
 
 static struct rule {
@@ -38,7 +38,8 @@ static struct rule {
 	{"\\|\\|", OR},
 	{"!", '!'},
 	{"\\(", '('},
-	{"\\)", ')'} 
+	{"\\)", ')'} ,
+        {"[a-zA-Z_0-9]+", VAR}
 };
 
 #define NR_REGEX (sizeof(rules) / sizeof(rules[0]) )
@@ -69,7 +70,6 @@ typedef struct token {
 
 Token tokens[32];
 int nr_token;
-
 static bool make_token(char *e) {
 	int position = 0;
 	int i;
@@ -94,9 +94,10 @@ static bool make_token(char *e) {
 
 				switch(rules[i].token_type) {
                                         case NOTYPE: break;
+                                        case VAR:
                                         case NUM:
-					//default: panic("please implement me");
                                         case REG: sprintf(tokens[nr_token].str, "%.*s", substr_len, substr_start);
+                                  //default: panic("please implement me");
 					default: tokens[nr_token].type = rules[i].token_type;
 							 nr_token ++;
 				}
@@ -171,6 +172,7 @@ static int find_dominated_op(int s, int e, bool *success) {
 }
 
 uint32_t get_reg_val(const char*, bool *);
+extern uint32_t find_obj(char *sym);
 
 static uint32_t eval(int s, int e, bool *success) {
 	if(s > e) {
@@ -187,7 +189,7 @@ static uint32_t eval(int s, int e, bool *success) {
 					  break;
 
 			case NUM: val = strtol(tokens[s].str, NULL, 0); break;
-
+                        case VAR: val=find_obj(tokens[s].str);break;
 			default: assert(0);
 		}
 
