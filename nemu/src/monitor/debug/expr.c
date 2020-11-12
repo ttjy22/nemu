@@ -101,6 +101,7 @@ static bool make_token(char *e) {
                                           s[substr_len] = 0;
                                           sprintf(tokens[nr_token].str, "%d", find_obj(s));
                                           tokens[nr_token].type = NUM;
+                                          nr_token++;
                                           break;
                                         case NUM:
                                         case REG: sprintf(tokens[nr_token].str, "%.*s", substr_len, substr_start);
