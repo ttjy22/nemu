@@ -189,7 +189,9 @@ static uint32_t eval(int s, int e, bool *success) {
 					  break;
 
 			case NUM: val = strtol(tokens[s].str, NULL, 0); break;
-                        case VAR: val=find_obj(tokens[s].str);break;
+                        case VAR: val=find_obj(tokens[s].str);
+                          tokens[s].type=NUM;
+                          break;
 			default: assert(0);
 		}
 
