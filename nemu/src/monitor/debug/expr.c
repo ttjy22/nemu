@@ -45,6 +45,7 @@ static struct rule {
 #define NR_REGEX (sizeof(rules) / sizeof(rules[0]) )
 
 static regex_t re[NR_REGEX];
+extern uint32_t find_obj(char *sym);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -73,6 +74,7 @@ int nr_token;
 static bool make_token(char *e) {
 	int position = 0;
 	int i;
+        char s[50];
 	regmatch_t pmatch;
 	
 	nr_token = 0;
@@ -95,6 +97,11 @@ static bool make_token(char *e) {
 				switch(rules[i].token_type) {
                                         case NOTYPE: break;
                                         case VAR:
+                                          strncpy(s, substr_start, substr_len);
+                                          s[substr_len] = 0;
+                                          sprintf(tokens[nr_token].str, "%d", find_obj(s));
+                                          tokens[nr_token].type = NUM;
+                                          break;
                                         case NUM:
                                         case REG: sprintf(tokens[nr_token].str, "%.*s", substr_len, substr_start);
                                   //default: panic("please implement me");
@@ -172,7 +179,6 @@ static int find_dominated_op(int s, int e, bool *success) {
 }
 
 uint32_t get_reg_val(const char*, bool *);
-extern uint32_t find_obj(char *sym);
 
 static uint32_t eval(int s, int e, bool *success) {
 	if(s > e) {
@@ -189,9 +195,7 @@ static uint32_t eval(int s, int e, bool *success) {
 					  break;
 
 			case NUM: val = strtol(tokens[s].str, NULL, 0); break;
-                        case VAR: val=find_obj(tokens[s].str);
-                          tokens[s].type=NUM;
-                          break;
+   
 			default: assert(0);
 		}
 
