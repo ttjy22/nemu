@@ -9,7 +9,7 @@
 
 void cpu_exec(uint32_t);
 void display_reg();
-
+void find_func_name(char *sym, uint32_t ip);
 /* We use the `readline' library to provide more flexibility to read from stdin. */
 char* rl_gets() {
 	static char *line_read = NULL;
@@ -98,7 +98,28 @@ static int cmd_p(char *args) {
 	}
 	return 0;
 }
+typedef struct
+{
+  swaddr_t prev_ebp;
+  swaddr_t ret_addr;
+  uint32_t args[4];
+} stackFrame;
 
+static int cmd_bt(char *args)
+{
+  stackFrame *head = (stackFrame *)(cpu.ebp + hw_mem);
+  uint32_t now = cpu.eip;
+  char funcName[50];
+  int i = 0;
+  while (head != (stackFrame *)hw_mem)
+  {
+    find_func_name(funcName, now);
+    printf("#%d 0x%x in %s(args1= 0x%x, args2= 0x%x, args3= 0x%x, args4= 0x%x)\n", i++, now, funcName, head->args[0], head->args[1], head->args[2], head->args[3]);
+    now = head->ret_addr;
+    head = (stackFrame *)(head->prev_ebp + hw_mem);
+  }
+  return 0;
+}
 /* Add set watchpoint  */
 static int cmd_w(char *args) {
 	if(args) {
@@ -146,8 +167,8 @@ static struct {
 	{ "x", "Examine memory", cmd_x },
         { "p", "Evaluate the value of expression", cmd_p },
 	{ "w", "Set watchpoint", cmd_w },
-	{ "d", "Delete watchpoint", cmd_d }
-
+	{ "d", "Delete watchpoint", cmd_d },
+        {"bt", "Print stack frame", cmd_bt}
 };
 
 #define NR_CMD (sizeof(cmd_table) / sizeof(cmd_table[0]))
