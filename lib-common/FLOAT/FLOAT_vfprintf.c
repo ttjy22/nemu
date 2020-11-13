@@ -4,6 +4,7 @@
 #include <sys/mman.h>
 extern char _vfprintf_internal;
 extern char _fpmaxtostr;
+extern char _ppfs_setargs;
 extern int __stdio_fwrite(char *buf, int len, FILE *stream);
 
 __attribute__((used)) static int format_FLOAT(FILE *stream, FLOAT f) {
@@ -17,19 +18,15 @@ __attribute__((used)) static int format_FLOAT(FILE *stream, FLOAT f) {
 
   char buf[80];
   int len;
-  if(f < 0)
-  {
+  if (f < 0) {
     f = -f;
     len = sprintf(buf, "-%d.", f >> 16);
-  }
-  else
-  {
+  } else {
     len = sprintf(buf, "%d.", f >> 16);
   }
   f &= 0xffff;
   int i;
-  for(i = len;i < len + 6;i++)
-  {
+  for (i = len; i < len + 6; i++) {
     f *= 10;
     buf[i] = f / 65536 + '0';
     f %= 65536;
@@ -46,8 +43,8 @@ static void modify_vfprintf() {
    */
   char *p = &_vfprintf_internal + 0x8048889 - 0x08048583;
   p++;
-//  mprotect((void *)((int)(p - 100) & 0xfffff000), 4096 * 2,
-//           PROT_READ | PROT_WRITE | PROT_EXEC);
+  //  mprotect((void *)((int)(p - 100) & 0xfffff000), 4096 * 2,
+  //           PROT_READ | PROT_WRITE | PROT_EXEC);
   int *q = (int *)p;
 
   *q += (char *)format_FLOAT - &_fpmaxtostr;
@@ -59,10 +56,10 @@ static void modify_vfprintf() {
   *p = 0xff;
   p[1] = 0x32;
   p[2] = 0x90;
-  p-=0x8048e5a- 0x8048e46;
+  p -= 0x8048e5a - 0x8048e46;
   *p = 0x90;
   p[1] = 0x90;
-  p-=4;
+  p -= 4;
   *p = 0x90;
   p[1] = 0x90;
 #if 0
@@ -201,6 +198,10 @@ static void modify_ppfs_setargs() {
 		++p;
 	}
 #endif
+  char *p = &_ppfs_setargs + 0x80113d - 0x008010c9;
+  *p = 0xeb;
+  p++;
+  *p = 0x801156 - 0x80113f;
 }
 
 void init_FLOAT_vfprintf() {
