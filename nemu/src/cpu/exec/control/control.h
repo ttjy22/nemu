@@ -5,6 +5,7 @@
 #ifndef NEMU2020_CONTROL_H
 #define NEMU2020_CONTROL_H
 #include "call.h"
+#include "jnp.h"
 #include "je.h"
 #include "jmp.h"
 #include "jbe.h"
